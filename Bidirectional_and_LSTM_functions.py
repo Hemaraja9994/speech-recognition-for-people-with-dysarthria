@@ -16,6 +16,7 @@ def create_LSTM_model(out_lstm):
     model_LSTM.compile(loss = 'categorical_crossentropy' , optimizer = 'adam' , metrics = ['accuracy'])
     model_LSTM.fit(x_train,y_train,epochs = 8 ,batch_size = 64)
     model_LSTM.summary()
+    return model_LSTM
 
 def create_Bidirectional_LSTM_model(out_lstm):
     model_Bid = Sequential()
@@ -41,10 +42,14 @@ def create_Bidirectional_LSTM_model(out_lstm):
     model_Bid.summary()
     return model_Bid
 
+
     
 LSTM = create_LSTM_model(out_lstm)
 score = LSTM.evaluate(x_test,y_test)
 print(score)
+
+
+
 Bi_LSTM = create_Bidirectional_LSTM_model(out_lstm)
 score = Bi_LSTM.evaluate(x_test,y_test)
 print(score)
