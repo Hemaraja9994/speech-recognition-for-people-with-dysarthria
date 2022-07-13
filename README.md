@@ -1,3 +1,7 @@
+Our graduation project aims to help to facilitate the communication between the 
+people who suffer from dysarthria with the people around them in the emergencies. 
+our project pipeline consists of three phases. Automatic speech recognition using bidirectional LSTM, Auto correction using Noisy channel model and Text-To-Speech 
+using google API. the data features are extracted using MFCC.
 # speech-recognition-for-people-with-dysarthria
 
 Arabic dataset:
